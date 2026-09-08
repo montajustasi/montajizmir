@@ -1,604 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>İzmir Montaj Ustası | Mobilya, Avize, Korniş, Tesisat | AE Teknik</title>
-<meta name="description" content="Çiğli, Karşıyaka, Menemen, Foça, Bayraklı, Bornova'da profesyonel montaj ustası. Mobilya, avize, korniş, stor perde, tesisat, elektrik montajı. Aynı gün servis. 0543 810 80 96">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<meta name="description" content="Montaj Ustası Ev Teknik Servis — İzmir Çiğli ve çevresinde mobilya, IKEA, TV, elektrik, su tesisatı, beyaz eşya, perde-korniş ve ev içi montaj hizmetleri.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://montajustasi.github.io/montajizmir/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Montaj Ustası Ev Teknik Servis | İzmir Montaj Ustası">
+<meta property="og:description" content="Mobilya, IKEA, TV, elektrik, tesisat, beyaz eşya ve ev içi montaj hizmetleri. Çiğli ve İzmir çevresi.">
+<meta property="og:url" content="https://montajustasi.github.io/montajizmir/">
+<title>Montaj Ustası Ev Teknik Servis | İzmir Montaj Ustası</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1220'/%3E%3Cpath d='M25 70 45 30l8 16 9-12 13 36H25Z' fill='%23f59e0b'/%3E%3C/svg%3E">
 <style>
-/* ─── RESET & ROOT ─── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --black:   #080808;
-  --dark:    #0f0f0f;
-  --card:    #141414;
-  --border:  rgba(255,255,255,0.07);
-  --orange:  #F85C2C;
-  --orange2: #FF7A52;
-  --cream:   #F0EBE1;
-  --gray:    #777;
-}
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--cream); overflow-x: hidden; padding-bottom: 62px; }
-a { -webkit-tap-highlight-color: transparent; }
-
-/* ─── TOPBAR ─── */
-.topbar {
-  background: var(--orange); padding: 0.5rem 1rem;
-  font-size: 0.75rem; font-weight: 600;
-  display: flex; justify-content: center; align-items: center; gap: 0.8rem;
-  flex-wrap: wrap; text-align: center; line-height: 1.5;
-}
-.topbar a { color: #fff; text-decoration: none; }
-.topbar .sep { color: rgba(255,255,255,0.4); }
-
-/* ─── NAV ─── */
-nav {
-  position: sticky; top: 0; z-index: 200;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0.85rem 1.1rem;
-  background: rgba(8,8,8,0.96); backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
-}
-.logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.55rem; letter-spacing: 3px; color: var(--cream); line-height: 1; }
-.logo span { color: var(--orange); }
-.logo small { font-family: 'DM Sans', sans-serif; font-size: 0.52rem; display: block; letter-spacing: 2px; color: var(--gray); font-weight: 400; }
-
-.hamburger {
-  display: flex; flex-direction: column; justify-content: center; gap: 5px;
-  width: 42px; height: 42px; padding: 7px;
-  background: none; border: none; cursor: pointer; border-radius: 8px;
-}
-.hamburger span { display: block; height: 2px; width: 100%; background: var(--cream); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-.nav-drawer {
-  position: fixed; inset: 0; background: rgba(8,8,8,0.99); z-index: 190;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  transform: translateY(-100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-}
-.nav-drawer.open { transform: translateY(0); }
-.nav-drawer a {
-  color: var(--cream); text-decoration: none; font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem; letter-spacing: 3px; padding: 1rem 2rem;
-  width: 100%; text-align: center; border-bottom: 1px solid var(--border);
-  transition: color 0.2s;
-}
-.nav-drawer a:hover { color: var(--orange); }
-.nav-drawer .dp {
-  margin-top: 1.5rem; background: var(--orange); color: #fff !important;
-  border-radius: 12px; width: calc(100% - 3rem); border-bottom: none; font-size: 1.4rem;
-}
-
-.nav-links-desk { display: none; list-style: none; gap: 2rem; }
-.nav-links-desk a { color: var(--gray); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
-.nav-links-desk a:hover { color: var(--orange); }
-.nav-phone-desk { display: none; background: var(--orange); color: #fff; padding: 0.5rem 1.3rem; border-radius: 5px; font-weight: 700; font-size: 0.9rem; text-decoration: none; white-space: nowrap; }
-
-/* ─── HERO ─── */
-.hero { padding: 2rem 1.1rem 2.5rem; position: relative; overflow: hidden; }
-.hero::before {
-  content: ''; position: absolute; top: -60px; right: -60px;
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(248,92,44,0.13) 0%, transparent 65%);
-  pointer-events: none;
-}
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  background: rgba(248,92,44,0.1); border: 1px solid rgba(248,92,44,0.3);
-  color: var(--orange); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
-  padding: 0.3rem 0.75rem; border-radius: 100px; margin-bottom: 1rem; width: fit-content;
-}
-.hero h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.6rem, 11vw, 4rem);
-  line-height: 0.95; letter-spacing: 1px; margin-bottom: 1rem;
-}
-.hero h1 em { color: var(--orange); font-style: normal; display: block; }
-.hero-desc { color: #888; font-size: 0.93rem; line-height: 1.75; margin-bottom: 1.5rem; font-weight: 300; }
-
-.hero-btns { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2rem; }
-.btn-main {
-  background: var(--orange); color: #fff; padding: 1rem 1.5rem; border-radius: 10px;
-  text-decoration: none; font-weight: 700; font-size: 1rem;
-  display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 52px;
-  transition: background 0.2s;
-}
-.btn-main:active { background: var(--orange2); }
-.btn-ghost {
-  background: transparent; color: var(--cream); padding: 1rem 1.5rem; border-radius: 10px;
-  text-decoration: none; font-weight: 500; font-size: 1rem;
-  border: 1px solid rgba(240,235,225,0.2);
-  display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 52px;
-}
-
-.hero-stats {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem;
-  padding-top: 1.5rem; border-top: 1px solid var(--border);
-}
-.stat-box { text-align: center; padding: 0.8rem; background: var(--card); border-radius: 10px; border: 1px solid var(--border); }
-.stat-n { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; color: var(--orange); line-height: 1; }
-.stat-l { font-size: 0.65rem; color: var(--gray); letter-spacing: 1px; text-transform: uppercase; margin-top: 0.2rem; }
-
-/* Info cards */
-.info-section { padding: 0 1.1rem 2rem; display: flex; flex-direction: column; gap: 0.7rem; }
-.info-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 1rem 1.1rem;
-  display: flex; align-items: center; gap: 0.9rem;
-}
-.info-card.hl { border-color: rgba(248,92,44,0.35); background: rgba(248,92,44,0.05); }
-.info-card-icon { font-size: 1.5rem; flex-shrink: 0; width: 38px; text-align: center; }
-.info-card-title { font-size: 0.83rem; font-weight: 700; margin-bottom: 0.2rem; }
-.info-card-sub { font-size: 0.73rem; color: var(--gray); line-height: 1.5; }
-.info-card-sub a { color: var(--orange); text-decoration: none; font-weight: 600; }
-
-.google-badge {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 0.9rem 1.1rem;
-  display: flex; align-items: center; gap: 0.9rem; text-decoration: none;
-}
-.g-logo { width: 32px; height: 32px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; font-weight: 700; color: #333; }
-.g-title { font-size: 0.78rem; font-weight: 700; color: var(--cream); }
-.g-stars { color: #FBBC04; font-size: 0.68rem; letter-spacing: 1px; }
-.g-sub { font-size: 0.66rem; color: var(--gray); margin-top: 0.1rem; }
-
-/* ─── LOCATIONS ─── */
-#lokasyonlar { background: var(--dark); padding: 1.3rem 1.1rem; }
-.loc-label { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 2px; color: var(--orange); margin-bottom: 0.6rem; }
-.loc-pills { display: flex; gap: 0.45rem; flex-wrap: wrap; }
-.loc-pill {
-  background: rgba(248,92,44,0.08); border: 1px solid rgba(248,92,44,0.2);
-  color: var(--cream); font-size: 0.73rem; font-weight: 500;
-  padding: 0.3rem 0.7rem; border-radius: 100px;
-}
-.loc-pill.more { background: rgba(248,92,44,0.15); border-color: rgba(248,92,44,0.4); color: var(--orange); }
-
-/* ─── SECTION COMMON ─── */
-section { padding: 2.5rem 1.1rem; }
-.sec-tag { font-size: 0.63rem; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; }
-.sec-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.7rem, 8vw, 2.6rem); letter-spacing: 1px; line-height: 1; margin-bottom: 0.7rem; }
-.sec-sub { color: #777; font-size: 0.88rem; line-height: 1.7; font-weight: 300; margin-bottom: 1.3rem; }
-
-/* ─── SERVICES ─── */
-#hizmetler { background: var(--black); }
-.cat-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.4rem; margin-bottom: 1.3rem; scrollbar-width: none; }
-.cat-scroll::-webkit-scrollbar { display: none; }
-.cat-tabs { display: flex; gap: 0.45rem; width: max-content; }
-.cat-tab {
-  background: transparent; border: 1px solid var(--border);
-  color: var(--gray); padding: 0.5rem 0.9rem;
-  border-radius: 100px; font-size: 0.78rem; font-weight: 500;
-  cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; min-height: 40px;
-}
-.cat-tab.active { background: var(--orange); border-color: var(--orange); color: #fff; }
-
-.srv-grid { display: flex; flex-direction: column; gap: 0.7rem; }
-.srv-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-.srv-card:not(.visible) { display: none; }
-.srv-card-head {
-  padding: 1rem 1.1rem; display: flex; align-items: center; justify-content: space-between;
-  cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent;
-}
-.srv-head-left { display: flex; align-items: center; gap: 0.75rem; }
-.srv-icon { font-size: 1.4rem; }
-.srv-name { font-size: 0.9rem; font-weight: 700; }
-.srv-chevron { color: var(--orange); font-size: 1rem; transition: transform 0.3s; flex-shrink: 0; }
-.srv-card.expanded .srv-chevron { transform: rotate(180deg); }
-.srv-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-.srv-card.expanded .srv-body { max-height: 700px; border-top: 1px solid var(--border); }
-.srv-items { list-style: none; padding: 0.7rem 1.1rem 1.1rem; }
-.srv-items li {
-  color: #666; font-size: 0.8rem; font-weight: 300;
-  padding: 0.3rem 0 0.3rem 1rem; position: relative;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
-}
-.srv-items li:last-child { border-bottom: none; }
-.srv-items li::before { content: '→'; position: absolute; left: 0; color: var(--orange); font-size: 0.62rem; top: 0.38rem; }
-
-/* ─── HOW ─── */
-#nasil { background: var(--dark); }
-.steps { display: flex; flex-direction: column; gap: 0; margin-top: 1.3rem; }
-.step { padding: 1.2rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 1rem; align-items: flex-start; }
-.step:last-child { border-bottom: none; }
-.step-n { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: rgba(248,92,44,0.22); line-height: 1; flex-shrink: 0; width: 2.8rem; }
-.step-t { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.25rem; }
-.step-d { color: #555; font-size: 0.78rem; line-height: 1.6; font-weight: 300; }
-
-/* ─── WHY ─── */
-#neden { background: var(--black); }
-.feats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-top: 1.3rem; }
-.feat { padding: 1.1rem 0.9rem; border-radius: 12px; border: 1px solid rgba(248,92,44,0.12); background: rgba(248,92,44,0.03); }
-.feat-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
-.feat-t { font-size: 0.82rem; font-weight: 700; margin-bottom: 0.25rem; }
-.feat-d { color: #555; font-size: 0.72rem; line-height: 1.5; font-weight: 300; }
-
-/* ─── REVIEWS ─── */
-#yorumlar { background: var(--dark); }
-.rev-grid { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.3rem; }
-.rev-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.3rem; }
-.rev-stars { color: #FBBC04; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 0.6rem; }
-.rev-text { color: #888; font-size: 0.83rem; line-height: 1.7; font-style: italic; margin-bottom: 0.9rem; font-weight: 300; }
-.rev-name { font-size: 0.8rem; font-weight: 700; }
-.rev-loc { color: var(--gray); font-size: 0.7rem; margin-top: 0.1rem; }
-
-/* ─── CTA ─── */
-#iletisim { background: var(--orange); text-align: center; padding: 3rem 1.2rem; position: relative; overflow: hidden; }
-#iletisim::before {
-  content: 'AE'; position: absolute; font-family: 'Bebas Neue', sans-serif;
-  font-size: 18rem; color: rgba(255,255,255,0.04);
-  top: 50%; left: 50%; transform: translate(-50%,-50%);
-  pointer-events: none; white-space: nowrap;
-}
-#iletisim .sec-tag { color: rgba(255,255,255,0.65); }
-#iletisim .sec-title { color: #fff; margin-bottom: 0.7rem; }
-#iletisim > p { color: rgba(255,255,255,0.85); margin-bottom: 1.8rem; font-size: 0.92rem; line-height: 1.65; }
-.cta-row { display: flex; flex-direction: column; gap: 0.7rem; position: relative; }
-.btn-w { background: #fff; color: var(--orange); padding: 1rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 52px; }
-.btn-ow { background: transparent; color: #fff; padding: 1rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 52px; }
-
-/* ─── FOOTER ─── */
-footer { background: #050505; padding: 1.8rem 1.1rem; border-top: 1px solid var(--border); text-align: center; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
-.foot-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 2px; }
-.foot-logo span { color: var(--orange); }
-.foot-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; }
-.foot-links a { color: var(--gray); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
-.foot-links a:hover { color: var(--orange); }
-.foot-phone { color: var(--orange); text-decoration: none; font-weight: 700; font-size: 0.95rem; display: block; }
-.foot-copy { color: #333; font-size: 0.68rem; line-height: 1.7; margin-top: 0.2rem; }
-
-/* ─── STICKY BOTTOM BAR ─── */
-.sticky-bar {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
-  display: flex;
-}
-.sticky-bar a {
-  flex: 1; padding: 0.95rem 0.5rem; min-height: 58px;
-  display: flex; align-items: center; justify-content: center; gap: 0.45rem;
-  text-decoration: none; font-weight: 700; font-size: 0.92rem;
-  border-top: 2px solid rgba(255,255,255,0.08);
-}
-.sticky-bar .sb-call { background: var(--orange); color: #fff; }
-.sticky-bar .sb-wa { background: #1ebe57; color: #fff; }
-
-/* ─── DESKTOP ─── */
-@media (min-width: 768px) {
-  body { padding-bottom: 0; }
-  .sticky-bar { display: none; }
-  .hamburger { display: none; }
-  .nav-links-desk { display: flex; }
-  .nav-phone-desk { display: block; }
-  nav { padding: 1rem 3rem; }
-
-  .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; padding: 5rem 3rem 4rem; min-height: 88vh; gap: 3rem; }
-  .hero-btns { flex-direction: row; margin-bottom: 0; }
-  .btn-main, .btn-ghost { justify-content: flex-start; }
-  .hero-stats { grid-template-columns: repeat(4, 1fr); }
-
-  .info-section { padding: 0; }
-
-  #lokasyonlar { padding: 2rem 3rem; display: flex; align-items: center; gap: 1.5rem; flex-direction: row; }
-  .loc-label { margin-bottom: 0; white-space: nowrap; }
-
-  section { padding: 5rem 3rem; }
-
-  .srv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.1rem; }
-  .srv-card-head { cursor: default; }
-  .srv-body { max-height: none !important; border-top: 1px solid var(--border) !important; }
-  .srv-chevron { display: none; }
-
-  .steps { flex-direction: row; margin-top: 2rem; }
-  .step { flex-direction: column; border-bottom: none; border-left: 1px solid var(--border); flex: 1; padding: 1.5rem; gap: 0; }
-  .step:first-child { border-left: none; }
-  .step-n { width: auto; font-size: 3rem; margin-bottom: 0.7rem; }
-
-  .feats { grid-template-columns: repeat(4, 1fr); }
-  .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-  .cta-row { flex-direction: row; justify-content: center; }
-
-  footer { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; padding: 2rem 3rem; }
-  .foot-links { justify-content: flex-start; }
-}
-@media (min-width: 1100px) {
-  nav { padding: 1rem 5rem; }
-  .hero { padding: 5rem 5rem 4rem; }
-  section { padding: 5rem 5rem; }
-  #lokasyonlar { padding: 2rem 5rem; }
-  footer { padding: 2rem 5rem; }
-}
+:root{--bg:#f6f7f9;--ink:#101827;--muted:#667085;--line:#e5e7eb;--card:#fff;--dark:#0b1220;--accent:#f59e0b;--accent2:#fbbf24;--green:#16a34a;--shadow:0 18px 55px rgba(15,23,42,.10);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input{font:inherit}
+.container{width:min(1180px,calc(100% - 32px));margin:auto}.topbar{background:#070d18;color:#d7dee8;font-size:13px}.topbar .container{display:flex;justify-content:space-between;gap:20px;padding:9px 0}.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(229,231,235,.8)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:850}.logo{width:42px;height:42px;border-radius:13px;background:var(--dark);display:grid;place-items:center;color:var(--accent);font-weight:900;box-shadow:0 8px 25px rgba(11,18,32,.18)}.brand small{display:block;color:var(--muted);font-weight:650;font-size:11px;letter-spacing:.04em}.navlinks{display:flex;gap:22px;font-weight:700;font-size:14px}.navlinks a:hover{color:#b45309}.navcta{display:flex;gap:8px}.btn{border:0;border-radius:13px;padding:12px 16px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn-dark{background:var(--dark);color:white}.btn-yellow{background:var(--accent);color:#111827}.btn-outline{background:#fff;border:1px solid var(--line)}.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#0b1220 0%,#111c31 58%,#17243d 100%);color:white}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 25%,rgba(245,158,11,.23),transparent 30%),radial-gradient(circle at 15% 90%,rgba(59,130,246,.16),transparent 32%);pointer-events:none}.hero .container{position:relative;z-index:1;padding:78px 0 70px;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid rgba(255,255,255,.15);border-radius:999px;color:#dbe5f3;background:rgba(255,255,255,.05);font-weight:750;font-size:13px}.dot{width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 5px rgba(34,197,94,.12)}h1{font-size:clamp(38px,5.5vw,68px);line-height:1.02;letter-spacing:-.045em;margin:18px 0 18px;max-width:760px}.hero p{font-size:18px;color:#c7d1df;max-width:680px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}.trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.trust span{border:1px solid rgba(255,255,255,.13);padding:8px 11px;border-radius:11px;background:rgba(255,255,255,.045);font-size:13px;color:#dbe5f3}.hero-visual{min-height:430px;border-radius:28px;border:1px solid rgba(255,255,255,.13);background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.025)),url("https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1100&q=78") center/cover;box-shadow:0 30px 90px rgba(0,0,0,.32);position:relative;overflow:hidden}.hero-visual:before{content:"";position:absolute;inset:auto 18px 18px 18px;height:105px;border-radius:20px;background:rgba(6,11,20,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.13)}.visual-copy{position:absolute;left:38px;right:38px;bottom:39px}.visual-copy strong{font-size:22px;display:block}.visual-copy span{color:#c7d1df;font-size:14px}.section{padding:88px 0}.section.alt{background:#fff}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.section h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.035em;margin:0}.section-head p{max-width:620px;color:var(--muted);margin:0}.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.quick{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;transition:.2s}.quick:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.quick b{display:block;margin:9px 0 4px}.quick span{color:var(--muted);font-size:13px}.icon{font-size:25px}.catalog-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}.search{flex:1;min-width:240px;position:relative}.search input{width:100%;padding:15px 16px 15px 45px;border:1px solid var(--line);border-radius:15px;background:#fff;outline:none}.search input:focus{border-color:#f3c36c;box-shadow:0 0 0 4px rgba(245,158,11,.12)}.search:before{content:"⌕";position:absolute;left:17px;top:9px;font-size:25px;color:#8a93a3}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#fff;padding:9px 12px;border-radius:999px;cursor:pointer;font-weight:750;font-size:13px}.chip.active{background:var(--dark);color:white;border-color:var(--dark)}.catalog{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}.service-card summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;justify-content:space-between;gap:15px;font-weight:850}.service-card summary::-webkit-details-marker{display:none}.service-card summary:after{content:"+";font-size:20px;color:#7c8593}.service-card[open] summary:after{content:"–"}.service-card .list{padding:0 20px 18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px}.service-card .list span{font-size:13px;color:#536071;padding-left:14px;position:relative}.service-card .list span:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);position:absolute;left:0;top:8px}.service-card.hidden{display:none}.count{color:var(--muted);font-size:13px;margin-left:auto}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{border-radius:22px;min-height:270px;padding:28px;color:#fff;display:flex;flex-direction:column;justify-content:end;overflow:hidden;position:relative;background:#111827}.feature:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,13,24,.88),rgba(7,13,24,.08)),var(--img) center/cover}.feature>*{position:relative}.feature h3{margin:0 0 7px;font-size:25px}.feature p{margin:0;color:#d6dde8;font-size:14px}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{background:#f8fafc;border:1px solid var(--line);border-radius:20px;padding:23px}.num{width:38px;height:38px;border-radius:12px;background:var(--dark);color:white;display:grid;place-items:center;font-weight:900;margin-bottom:25px}.step h3{margin:0 0 8px}.step p{color:var(--muted);font-size:14px;margin:0}.areas{display:flex;flex-wrap:wrap;gap:10px}.area{padding:12px 15px;background:#fff;border:1px solid var(--line);border-radius:13px;font-weight:750}.faq{max-width:850px;margin:auto}.faq details{background:#fff;border:1px solid var(--line);border-radius:15px;margin:10px 0;padding:0 18px}.faq summary{cursor:pointer;font-weight:800;padding:18px 0}.faq p{color:var(--muted);margin:0 0 18px}.contact{background:var(--dark);color:white;border-radius:30px;padding:42px;display:flex;justify-content:space-between;gap:25px;align-items:center}.contact p{color:#c8d2df;max-width:680px}.footer{background:#070d18;color:#aeb8c6;padding:45px 0 90px}.footergrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}.footer strong{color:white}.footer a:hover{color:white}.sticky{display:none;position:fixed;z-index:80;bottom:12px;left:12px;right:12px;gap:8px}.sticky a{flex:1}.notice{font-size:12px;color:#7b8492;margin-top:14px}
+@media(max-width:950px){.hero .container{grid-template-columns:1fr}.hero-visual{min-height:330px}.quick-grid{grid-template-columns:repeat(2,1fr)}.catalog{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:1fr}.navlinks{display:none}.navcta .btn-outline{display:none}.footergrid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.topbar .container{justify-content:center}.topbar .container span:last-child{display:none}.navin{height:64px}.brand div:last-child{display:none}.navcta .btn{padding:10px 11px}.hero .container{padding:58px 0 45px}.hero-visual{min-height:290px}.section{padding:65px 0}.quick-grid,.catalog,.process{grid-template-columns:1fr}.service-card .list{grid-template-columns:1fr}.contact{padding:28px;display:block}.contact .actions{margin-bottom:0}.footergrid{grid-template-columns:1fr}.sticky{display:flex}.section-head{display:block}.section-head p{margin-top:12px}body{padding-bottom:68px}}
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Montaj Ustası Ev Teknik Servis",
+  "description":"İzmir Çiğli ve çevresinde mobilya, IKEA, TV, elektrik, tesisat, beyaz eşya ve ev içi montaj hizmetleri.",
+  "telephone":"+90 543 810 80 96",
+  "url":"https://montajustasi.github.io/montajizmir/",
+  "sameAs":["https://www.instagram.com/aeklimatemizleme.izmir"],
+  "foundingDate":"2012-11-10",
+  "areaServed":[
+    "Çiğli, İzmir","Bornova, İzmir","Menemen, İzmir","Bayraklı, İzmir","Karşıyaka, İzmir",
+    "Evka-5, Çiğli","Egekent, Çiğli","Evka-2, Çiğli","Bostanlı, Karşıyaka","Mavişehir, Karşıyaka",
+    "Ulukent, Menemen","Seyrek, Menemen"
+  ]
+}
+</script>
 </head>
 <body>
+<div class="topbar"><div class="container"><span>📍 Çiğli • Karşıyaka • Menemen • Bayraklı • Bornova</span><span>Her gün 08:00–22:00 • 0543 810 80 96</span></div></div>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <span>📍 Çiğli · Karşıyaka · Menemen · Foça · Bayraklı · Bornova</span>
-  <span class="sep">|</span>
-  <span>🕐 08:00–22:00</span>
-  <span class="sep">|</span>
-  <a href="tel:05438108096">📞 0543 810 80 96</a>
+<nav class="nav"><div class="container navin">
+<a class="brand" href="#"><span class="logo">MU</span><div>Montaj Ustası <small>EV TEKNİK SERVİS</small></div></a>
+<div class="navlinks"><a href="#hizmetler">Hizmetler</a><a href="#ikea">IKEA</a><a href="#bolgeler">Bölgeler</a><a href="#surec">Nasıl Çalışır?</a><a href="#iletisim">İletişim</a></div>
+<div class="navcta"><a class="btn btn-outline" href="tel:+905438108096">Ara</a><a class="btn btn-yellow" href="https://wa.me/905438108096" target="_blank" rel="noopener">WhatsApp</a></div>
+</div></nav>
+
+<header class="hero"><div class="container">
+<div>
+<span class="eyebrow"><i class="dot"></i> İzmir • Evde Montaj & Teknik Hizmet</span>
+<h1>Evde yapılması gereken montaj işlerini tek yerde çözün.</h1>
+<p>Mobilya ve IKEA kurulumundan TV, raf, perde-korniş, avize, elektrik, su tesisatı, beyaz eşya ve küçük ev tamiratlarına kadar kapsamlı montaj hizmeti.</p>
+<div class="actions"><a class="btn btn-yellow" href="tel:+905438108096">📞 Hemen Ara</a><a class="btn" style="background:white;color:#101827" href="https://wa.me/905438108096" target="_blank" rel="noopener">💬 WhatsApp'tan Yaz</a></div>
+<div class="trust"><span>✓ Evde hizmet</span><span>✓ Aynı gün uygunluğa göre</span><span>✓ Profesyonel ekipman</span><span>✓ Çiğli merkezli</span></div>
 </div>
+<div class="hero-visual"><div class="visual-copy"><strong>Montaj Ustası Ev Teknik Servis</strong><span>Mobilya • IKEA • TV • Elektrik • Tesisat • Beyaz Eşya • Handyman</span></div></div>
+</div></header>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">AE<span>Teknik</span><small>SERVİS & MONTAJ HİZMETLERİ</small></div>
-  <ul class="nav-links-desk">
-    <li><a href="#hizmetler">Hizmetler</a></li>
-    <li><a href="#lokasyonlar">Bölgeler</a></li>
-    <li><a href="#nasil">Nasıl Çalışır</a></li>
-    <li><a href="#yorumlar">Yorumlar</a></li>
-  </ul>
-  <a href="tel:05438108096" class="nav-phone-desk">📞 0543 810 80 96</a>
-  <button class="hamburger" id="hamBtn" aria-label="Menü"><span></span><span></span><span></span></button>
-</nav>
+<main>
+<section class="section"><div class="container">
+<div class="section-head"><div><h2>En çok aranan hizmetler</h2></div><p>Google'da müşterilerin aradığı montaj ve kurulum ihtiyaçlarını doğrudan karşılayan hizmet başlıkları.</p></div>
+<div class="quick-grid">
+<a class="quick" href="#hizmetler"><span class="icon">🪑</span><b>Mobilya & Gardırop</b><span>Gardırop, dolap, mutfak, ofis, yatak odası</span></a>
+<a class="quick" href="#ikea"><span class="icon">🔧</span><b>IKEA Montajı</b><span>PAX, KALLAX, MALM, BESTÅ, BILLY ve daha fazlası</span></a>
+<a class="quick" href="#hizmetler"><span class="icon">📺</span><b>TV & Duvar</b><span>TV asma, ünite, raf, soundbar, kablo gizleme</span></a>
+<a class="quick" href="#hizmetler"><span class="icon">💡</span><b>Avize & Elektrik</b><span>Avize, LED, priz, anahtar, kablo ve aydınlatma</span></a>
+<a class="quick" href="#hizmetler"><span class="icon">🚿</span><b>Musluk & Tesisat</b><span>Batarya, sifon, gider, vana, duş ve banyo aksesuarları</span></a>
+<a class="quick" href="#hizmetler"><span class="icon">🧺</span><b>Beyaz Eşya</b><span>Çamaşır, bulaşık, ankastre, davlumbaz bağlantı ve montajı</span></a>
+<a class="quick" href="#hizmetler"><span class="icon">🪟</span><b>Perde & Korniş</b><span>Korniş, stor, zebra, perde rayı ve değişimleri</span></a>
+<a class="quick" href="#hizmetler"><span class="icon">🛠️</span><b>Ev Tamiratı</b><span>Kapı, pencere, duvar, süpürgelik, küçük tamiratlar</span></a>
+</div></div></section>
 
-<!-- MOBILE DRAWER -->
-<div class="nav-drawer" id="drawer">
-  <a href="#hizmetler">Hizmetler</a>
-  <a href="#lokasyonlar">Bölgeler</a>
-  <a href="#nasil">Nasıl Çalışır</a>
-  <a href="#yorumlar">Yorumlar</a>
-  <a href="tel:05438108096" class="dp">📞 0543 810 80 96</a>
+<section class="section alt" id="hizmetler"><div class="container">
+<div class="section-head"><div><h2>Tüm hizmetler</h2></div><p>Aradığınız işi yazın veya kategori seçin. Katalog, hizmet sayfalarında kullanılabilecek kapsamlı arama kelimelerini içerir.</p></div>
+<div class="catalog-top"><div class="search"><input id="serviceSearch" type="search" placeholder="Örn. PAX, avize, musluk, TV, priz, korniş..." aria-label="Hizmet ara"></div><span class="count" id="serviceCount"></span></div>
+<div class="chips" id="chips"></div>
+<div class="catalog" id="catalog"></div>
+</div></section>
+
+<section class="section" id="ikea"><div class="container">
+<div class="section-head"><div><h2>IKEA montajı — model bazlı</h2></div><p>IKEA özelinde ayrı arama niyetlerini hedefleyen model ve ürün montajları. PAX ve KALLAX öncelikli görünür.</p></div>
+<div class="feature-grid">
+<div class="feature" style="--img:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=78')"><h3>PAX</h3><p>Gardırop, kapak, sürgülü kapak, KOMPLEMENT, çekmece, raf ve sabitleme.</p></div>
+<div class="feature" style="--img:url('https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=900&q=78')"><h3>KALLAX</h3><p>Raf, kapak, çekmece, sepet, ayak, bölme ve duvara sabitleme.</p></div>
+<div class="feature" style="--img:url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=900&q=78')"><h3>BESTÅ • BILLY • EKET</h3><p>TV ünitesi, kitaplık, dolap, kapak, çekmece ve duvar montajları.</p></div>
 </div>
+</div></section>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <div class="hero-eyebrow">⚡ Aynı Gün Servis · İzmir Geneli</div>
-    <h1>İzmir'de Her<br><em>Montaj İşi</em><br>Burada.</h1>
-    <p class="hero-desc">Mobilyadan elektriğe, tesisattan beyaz eşyaya — evinizde montaj gerektiren her işi hızlı, garantili ve profesyonelce yapıyoruz.</p>
-    <div class="hero-btns">
-      <a href="tel:05438108096" class="btn-main">📞 Hemen Ara</a>
-      <a href="https://wa.me/905438108096" class="btn-ghost">💬 WhatsApp</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-box"><div class="stat-n">500+</div><div class="stat-l">Tamamlanan İş</div></div>
-      <div class="stat-box"><div class="stat-n">4.9★</div><div class="stat-l">Google Puanı</div></div>
-      <div class="stat-box"><div class="stat-n">2 Yıl</div><div class="stat-l">Garanti</div></div>
-      <div class="stat-box"><div class="stat-n">6 İlçe</div><div class="stat-l">Hizmet Alanı</div></div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="info-section">
-      <div class="info-card hl">
-        <div class="info-card-icon">📞</div>
-        <div><div class="info-card-title">Telefon & WhatsApp</div><div class="info-card-sub"><a href="tel:05438108096">0543 810 80 96</a> — Hızlı yanıt, ücretsiz fiyat</div></div>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">🕐</div>
-        <div><div class="info-card-title">Çalışma Saatleri</div><div class="info-card-sub">Her gün <strong style="color:var(--cream)">08:00 – 22:00</strong></div></div>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">📍</div>
-        <div><div class="info-card-title">Hizmet Bölgeleri</div><div class="info-card-sub">Çiğli · Karşıyaka · Menemen · Foça · Bayraklı · Bornova</div></div>
-      </div>
-      <a href="https://www.google.com/search?q=AE+Teknik+%E2%80%93+Servis+%26+Montaj+Hizmetleri" target="_blank" class="google-badge">
-        <div class="g-logo">G</div>
-        <div><div class="g-title">AE Teknik – Google İşletme</div><div class="g-stars">★★★★★</div><div class="g-sub">Yorumları görün ve yorum bırakın →</div></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- LOCATIONS -->
-<div id="lokasyonlar">
-  <div class="loc-label">📍 HİZMET BÖLGELERİ</div>
-  <div class="loc-pills">
-    <span class="loc-pill">🏙️ Çiğli</span>
-    <span class="loc-pill">🏙️ Karşıyaka</span>
-    <span class="loc-pill">🏙️ Menemen</span>
-    <span class="loc-pill">🏙️ Foça</span>
-    <span class="loc-pill">🏙️ Bayraklı</span>
-    <span class="loc-pill">🏙️ Bornova</span>
-    <span class="loc-pill more">+ çevre ilçeler</span>
-  </div>
+<section class="section alt"><div class="container">
+<div class="section-head"><div><h2>Neden tercih ediliyoruz?</h2></div><p>Hizmet sürecini müşterinin anlayacağı şekilde sade, net ve telefon/WhatsApp'a hızlı geçiş sağlayacak biçimde tasarladık.</p></div>
+<div class="process" id="surec">
+<div class="step"><div class="num">01</div><h3>Arayın veya yazın</h3><p>Yapılacak işi ve mümkünse ürünün fotoğrafını WhatsApp'tan gönderin.</p></div>
+<div class="step"><div class="num">02</div><h3>İşi netleştirelim</h3><p>Montajın türünü, adedini ve gerekiyorsa duvar/alan koşullarını belirleyelim.</p></div>
+<div class="step"><div class="num">03</div><h3>Randevuyu planlayalım</h3><p>Uygun gün ve saat için birlikte planlama yapalım.</p></div>
+<div class="step"><div class="num">04</div><h3>Montaj tamam</h3><p>İşi kontrollü şekilde tamamlayıp çalışma alanını düzenli bırakmayı hedefleyelim.</p></div>
 </div>
+</div></section>
 
-<!-- SERVICES -->
-<section id="hizmetler">
-  <div class="sec-tag">Ne Yapıyoruz</div>
-  <div class="sec-title">Tüm Hizmetlerimiz</div>
-  <p class="sec-sub">8 kategoride kapsamlı montaj ve teknik servis hizmeti.</p>
-  <div class="cat-scroll">
-    <div class="cat-tabs">
-      <button class="cat-tab active" onclick="filterSrv('all',this)">🔍 Tümü</button>
-      <button class="cat-tab" onclick="filterSrv('mobilya',this)">🔧 Mobilya</button>
-      <button class="cat-tab" onclick="filterSrv('tesisat',this)">🚿 Tesisat</button>
-      <button class="cat-tab" onclick="filterSrv('elektrik',this)">⚡ Elektrik</button>
-      <button class="cat-tab" onclick="filterSrv('beyaz',this)">📺 Beyaz Eşya</button>
-      <button class="cat-tab" onclick="filterSrv('kapi',this)">🚪 Kapı & Pencere</button>
-      <button class="cat-tab" onclick="filterSrv('duvar',this)">🧱 Duvar</button>
-      <button class="cat-tab" onclick="filterSrv('isinma',this)">❄️ Isıtma</button>
-      <button class="cat-tab" onclick="filterSrv('genel',this)">🔩 Genel</button>
-      <button class="cat-tab" onclick="filterSrv('ekstra',this)">💡 Ekstra</button>
-    </div>
-  </div>
-  <div class="srv-grid">
-    <div class="srv-card visible" data-cat="mobilya">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">🔧</span><span class="srv-name">Mobilya Montajı</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>Gardırop montajı</li><li>Sürgülü dolap montajı</li><li>Mutfak dolabı montajı</li><li>Banyo dolabı montajı</li><li>TV ünitesi montajı</li><li>Kitaplık montajı</li><li>Şifonyer & komodin montajı</li><li>Çalışma & yemek masası montajı</li><li>Sandalye montajı</li><li>Bebek odası takımı montajı</li><li>Ranza montajı</li><li>Ofis mobilyası montajı</li><li>Raf sistemleri kurulumu</li><li>Duvar rafı & askılık montajı</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="tesisat">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">🚿</span><span class="srv-name">Sıhhi Tesisat</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>Musluk (batarya) montajı</li><li>Lavabo montajı</li><li>Klozet & rezervuar montajı</li><li>Duş seti & duşakabin montajı</li><li>Banyo aksesuarları montajı</li><li>Çamaşır makinesi su bağlantısı</li><li>Bulaşık makinesi su bağlantısı</li><li>Su kaçağı tespiti ve tamiri</li><li>Gider açma (lavabo, banyo)</li><li>Sifon değişimi</li><li>Kombi su bağlantı montajı</li><li>Petek (radyatör) montajı</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="elektrik">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">⚡</span><span class="srv-name">Elektrik Montajı</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>Avize & LED aydınlatma montajı</li><li>Spot ışık montajı</li><li>Priz montajı / değişimi</li><li>Anahtar (switch) montajı</li><li>Sigorta (otomatik) değişimi</li><li>Elektrik panosu düzenleme</li><li>TV askı aparatı montajı</li><li>Uydu kablo düzenleme</li><li>İnternet kablo çekimi</li><li>Kapı zili montajı</li><li>Sensörlü lamba montajı</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="beyaz">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">📺</span><span class="srv-name">Elektronik & Beyaz Eşya</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>TV duvar montajı</li><li>Çamaşır makinesi kurulumu</li><li>Bulaşık makinesi kurulumu</li><li>Buzdolabı yerleştirme</li><li>Ankastre fırın montajı</li><li>Ocak montajı (gazlı / elektrikli)</li><li>Davlumbaz montajı</li><li>Klima montajı (temel kurulum)</li><li>Şofben / termosifon montajı</li><li>Su arıtma cihazı montajı</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="kapi">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">🚪</span><span class="srv-name">Kapı & Pencere İşleri</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>Oda kapısı montajı</li><li>Kapı kolu değişimi</li><li>Kilit montajı / değişimi</li><li>Pimapen pencere ayarı</li><li>Sineklik montajı</li><li>Kapı hidroliği montajı</li><li>Sürgülü kapı montajı</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="duvar">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">🧱</span><span class="srv-name">Duvar & Montaj İşleri</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>Duvara TV askı aparatı montajı</li><li>Tablo & ayna montajı</li><li>Perde korniş montajı</li><li>Stor perde montajı</li><li>Duvar delme (dübel vida)</li><li>Askı aparatları montajı</li><li>Dekoratif panel montajı</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="isinma">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">❄️</span><span class="srv-name">Isıtma & Soğutma</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>Klima montajı</li><li>Klima sökme–takma</li><li>Kombi montajı (temel bağlantı)</li><li>Kombi tamiri ve bakımı</li><li>Petek temizliği</li><li>Termostat montajı</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="genel">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">🔩</span><span class="srv-name">Genel Tamir & Montaj</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>Silikon çekme (banyo, mutfak)</li><li>Vida–somun sıkma / genel onarım</li><li>Mobilya kapak ayarı</li><li>Menteşe değişimi</li><li>Ray sistemi tamiri (çekmece)</li><li>Küçük tadilat işleri</li><li>Duvar çatlak tamiri (basit)</li><li>Askı, raf, aparat sabitleme</li></ul></div>
-    </div>
-    <div class="srv-card visible" data-cat="ekstra">
-      <div class="srv-card-head" onclick="toggleCard(this)"><div class="srv-head-left"><span class="srv-icon">💡</span><span class="srv-name">Ekstra & Popüler Paketler</span></div><span class="srv-chevron">▾</span></div>
-      <div class="srv-body"><ul class="srv-items"><li>IKEA / Koçtaş ürün kurulumu</li><li>Online alınan ürünlerin montajı</li><li>Ev kurulum paketi (toplu montaj)</li><li>Taşınma sonrası kurulum</li><li>Ofis kurulum hizmeti</li><li>Acil servis (aynı gün montaj)</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="nasil">
-  <div class="sec-tag">Süreç</div>
-  <div class="sec-title">4 Adımda Hizmet</div>
-  <div class="steps">
-    <div class="step"><div class="step-n">01</div><div><div class="step-t">Arayın veya Yazın</div><div class="step-d">0543 810 80 96'yı arayın ya da WhatsApp'tan yazın. Ne yaptırmak istediğinizi anlatın.</div></div></div>
-    <div class="step"><div class="step-n">02</div><div><div class="step-t">Ücretsiz Fiyat Alın</div><div class="step-d">Net ve şeffaf fiyat teklifi veriyoruz. Sonradan sürpriz ücret çıkmaz.</div></div></div>
-    <div class="step"><div class="step-n">03</div><div><div class="step-t">Randevu Belirleyin</div><div class="step-d">Her gün 08:00–22:00 arası size uygun saati seçin. Çoğu zaman aynı gün gelebiliyoruz.</div></div></div>
-    <div class="step"><div class="step-n">04</div><div><div class="step-t">İşiniz Tamam</div><div class="step-d">Montajı tamamlar, çalışma alanını temizler, garantinizi teslim ederiz.</div></div></div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section id="neden">
-  <div class="sec-tag">Fark</div>
-  <div class="sec-title">Neden AE Teknik?</div>
-  <div class="feats">
-    <div class="feat"><div class="feat-icon">⚡</div><div class="feat-t">Aynı Gün Servis</div><div class="feat-d">Uygun günlerde aynı gün randevu. Bekletmiyoruz.</div></div>
-    <div class="feat"><div class="feat-icon">🕐</div><div class="feat-t">08:00–22:00</div><div class="feat-d">Her gün geniş saatlerde hizmetinizdeyiz.</div></div>
-    <div class="feat"><div class="feat-icon">🛡️</div><div class="feat-t">2 Yıl Garanti</div><div class="feat-d">Tüm işlerimize 2 yıl işçilik garantisi.</div></div>
-    <div class="feat"><div class="feat-icon">🔩</div><div class="feat-t">Pro Ekipman</div><div class="feat-d">Doğru aletlerle hasarsız ve sağlam montaj.</div></div>
-    <div class="feat"><div class="feat-icon">🧹</div><div class="feat-t">Temiz Çalışma</div><div class="feat-d">İş bitince ambalaj ve çöpleri toplayarak ayrılırız.</div></div>
-    <div class="feat"><div class="feat-icon">💬</div><div class="feat-t">Şeffaf Fiyat</div><div class="feat-d">Baştan ne söyledik o kadar. Gizli ücret yok.</div></div>
-    <div class="feat"><div class="feat-icon">📍</div><div class="feat-t">6 İlçede Aktif</div><div class="feat-d">Çiğli, Karşıyaka, Menemen, Foça, Bayraklı, Bornova.</div></div>
-    <div class="feat"><div class="feat-icon">⭐</div><div class="feat-t">Google'da 4.9</div><div class="feat-d">Yüzlerce gerçek müşteri yorumuyla kanıtlanmış.</div></div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="yorumlar">
-  <div class="sec-tag">Müşteriler Ne Diyor</div>
-  <div class="sec-title">Gerçek Yorumlar</div>
-  <div class="rev-grid">
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">"Gardırobumu ve TV'yi aynı günde hem de çok temiz şekilde taktırdım. Gerçekten profesyonel, kesinlikle tavsiye ederim!"</div><div class="rev-name">Fatma Ş.</div><div class="rev-loc">Karşıyaka, İzmir</div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">"Mutfak dolabı ve ankastre kurulumunu mükemmel yaptılar. Fiyat net verildi, sonradan ekstra çıkmadı."</div><div class="rev-name">Mustafa K.</div><div class="rev-loc">Bornova, İzmir</div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">"Taşınma sonrasında tüm mobilyaları tek seferde kurdu. Menemen'de bu kalitede hizmet bulmak gerçekten zor."</div><div class="rev-name">Elif T.</div><div class="rev-loc">Menemen, İzmir</div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">"Gece geç saatte aradım, sabahı beklemeden sorunumu hallettiler. Acil servis gerçekten çalışıyor!"</div><div class="rev-name">Ahmet D.</div><div class="rev-loc">Bayraklı, İzmir</div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">"IKEA'dan aldığım tüm mobilyaların montajını yaptırdım. Hiçbir parça zarar görmedi, her şey sağlam durdu."</div><div class="rev-name">Zeynep A.</div><div class="rev-loc">Çiğli, İzmir</div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">"Pimapen pencere ayarı ve kapı kilidi değişimini hallettirdim. Hem hızlı hem de temiz çalıştılar."</div><div class="rev-name">Hakan Y.</div><div class="rev-loc">Foça, İzmir</div></div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section id="iletisim">
-  <div class="sec-tag">Hemen Başlayalım</div>
-  <div class="sec-title">Montajınız<br>Bekliyor.</div>
-  <p>Bugün arayın ya da WhatsApp'tan yazın. Ücretsiz fiyat teklifi alın, randevunuzu belirleyin.</p>
-  <div class="cta-row">
-    <a href="tel:05438108096" class="btn-w">📞 0543 810 80 96</a>
-    <a href="https://wa.me/905438108096" class="btn-ow">💬 WhatsApp</a>
-    <a href="https://www.google.com/search?q=AE+Teknik+%E2%80%93+Servis+%26+Montaj+Hizmetleri" target="_blank" class="btn-ow">⭐ Google'da Gör</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="foot-logo">AE<span>Teknik</span></div>
-  <ul class="foot-links">
-    <li><a href="#hizmetler">Hizmetler</a></li>
-    <li><a href="#lokasyonlar">Bölgeler</a></li>
-    <li><a href="#nasil">Nasıl Çalışır</a></li>
-    <li><a href="#iletisim">İletişim</a></li>
-  </ul>
-  <div>
-    <a href="tel:05438108096" class="foot-phone">0543 810 80 96</a>
-    <div class="foot-copy">© 2025 AE Teknik<br>Çiğli · Karşıyaka · Menemen · Foça · Bayraklı · Bornova</div>
-  </div>
-</footer>
-
-<!-- STICKY BOTTOM BAR (mobile) -->
-<div class="sticky-bar">
-  <a href="tel:05438108096" class="sb-call">📞 Hemen Ara</a>
-  <a href="https://wa.me/905438108096" class="sb-wa">💬 WhatsApp</a>
+<section class="section" id="bolgeler"><div class="container">
+<div class="section-head"><div><h2>Hizmet bölgeleri</h2></div><p>Ev ve iş yeri montaj hizmetleri için öncelikli çalışma bölgeleri.</p></div>
+<div class="areas">
+<span class="area">Çiğli / İzmir</span><span class="area">Bornova / İzmir</span><span class="area">Menemen / İzmir</span><span class="area">Bayraklı / İzmir</span><span class="area">Karşıyaka / İzmir</span><span class="area">Evka-5</span><span class="area">Egekent</span><span class="area">Evka-2</span><span class="area">Bostanlı</span><span class="area">Mavişehir</span><span class="area">Ulukent</span><span class="area">Seyrek</span>
 </div>
+</div></section>
 
+<section class="section alt"><div class="container faq">
+<div class="section-head"><div><h2>Sık sorulanlar</h2></div></div>
+<details><summary>Hangi tür mobilyaların montajını yapıyorsunuz?</summary><p>Gardırop, dolap, mutfak ve banyo dolabı, TV ünitesi, kitaplık, raf, masa, yatak, baza, çocuk ve bebek odası mobilyaları, ofis mobilyaları ve demonte ürünlerin kurulumu.</p></details>
+<details><summary>IKEA montajı yapıyor musunuz?</summary><p>Evet. PAX, KALLAX, MALM, BESTÅ, BILLY, BRIMNES, PLATSA, EKET, METOD, ENHET, HEMNES, MICKE, ALEX ve listelenen diğer IKEA ürünleri için montaj, ayar, sökme-yeniden kurulum ve sabitleme hizmetleri sunulmaktadır.</p></details>
+<details><summary>TV, raf ve ayna duvara monte edilir mi?</summary><p>TV askı aparatı, TV ünitesi, soundbar, raf, kitaplık, ayna, tablo, saat ve çeşitli duvar aksesuarlarının montajı yapılır. Duvar tipi ve ürün ağırlığına göre uygun bağlantı yöntemi belirlenir.</p></details>
+<details><summary>Çamaşır ve bulaşık makinesi bağlantısı yapılıyor mu?</summary><p>Uygun mevcut bağlantılar üzerinden su, gider ve cihaz bağlantıları ile kurulum/sökme-yeniden kurulum hizmetleri verilir. Yeni tesisat veya özel elektrik/gaz altyapısı gereken işlerde kapsam ayrıca değerlendirilir.</p></details>
+<details><summary>Elektrik ve su tesisatı işleri yapılıyor mu?</summary><p>Hizmet kataloğunda priz, anahtar, aydınlatma, kablo kanalı, bazı zayıf akım işleri; musluk, sifon, gider, vana, flexible, duş ve banyo aksesuarları gibi montaj ve küçük tamiratlar yer alır. İşin niteliğine göre uygunluk önceden netleştirilir.</p></details>
+<details><summary>Nasıl fiyat alabilirim?</summary><p>0543 810 80 96 numarasını arayabilir veya WhatsApp üzerinden işin fotoğrafını, ürün/model bilgisini ve konumu göndererek fiyatlandırma için bilgi alabilirsiniz.</p></details>
+</div></section>
+
+<section class="section"><div class="container"><div class="contact" id="iletisim">
+<div><h2>Montaj işiniz için iletişime geçin.</h2><p>Telefon veya WhatsApp üzerinden yapılacak işi anlatın. Ürün/model fotoğrafı göndermeniz, işin daha hızlı değerlendirilmesine yardımcı olur.</p></div>
+<div class="actions"><a class="btn btn-yellow" href="tel:+905438108096">📞 0543 810 80 96</a><a class="btn" style="background:white;color:#101827" href="https://wa.me/905438108096" target="_blank" rel="noopener">💬 WhatsApp</a></div>
+</div></div></section>
+</main>
+
+<footer class="footer"><div class="container footergrid">
+<div><strong>Montaj Ustası Ev Teknik Servis</strong><p>İzmir Çiğli merkezli evde montaj, kurulum, bakım ve küçük tamirat hizmetleri.</p><p>Her gün 08:00–22:00<br>0543 810 80 96</p></div>
+<div><strong>Hızlı menü</strong><p><a href="#hizmetler">Tüm hizmetler</a><br><a href="#ikea">IKEA montajı</a><br><a href="#bolgeler">Hizmet bölgeleri</a><br><a href="#surec">Nasıl çalışır?</a></p></div>
+<div><strong>Online</strong><p><a href="https://wa.me/905438108096" target="_blank" rel="noopener">WhatsApp</a><br><a href="https://www.instagram.com/aeklimatemizleme.izmir" target="_blank" rel="noopener">Instagram</a></p></div>
+</div><div class="container notice">© 2012–2026 Montaj Ustası Ev Teknik Servis • Bu site hizmet bilgilerini açık ve hızlı erişilebilir şekilde sunmak amacıyla hazırlanmıştır.</div></footer>
+
+<div class="sticky"><a class="btn btn-dark" href="tel:+905438108096">📞 Ara</a><a class="btn btn-yellow" href="https://wa.me/905438108096" target="_blank" rel="noopener">💬 WhatsApp</a></div>
+<script src="data.js"></script>
 <script>
-// Hamburger
-const hamBtn = document.getElementById('hamBtn');
-const drawer = document.getElementById('drawer');
-hamBtn.addEventListener('click', () => {
-  hamBtn.classList.toggle('open');
-  drawer.classList.toggle('open');
-  document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
-});
-drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  hamBtn.classList.remove('open');
-  drawer.classList.remove('open');
-  document.body.style.overflow = '';
-}));
-
-// Filter
-function filterSrv(cat, btn) {
-  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.srv-card').forEach(c => {
-    c.classList.toggle('visible', cat === 'all' || c.dataset.cat === cat);
-  });
+const catalog=document.getElementById('catalog'), chips=document.getElementById('chips'), search=document.getElementById('serviceSearch'), count=document.getElementById('serviceCount');
+const categories=['Tümü',...Object.keys(SERVICE_CATALOG)];
+let active='Tümü';
+function esc(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+categories.forEach(c=>{const b=document.createElement('button');b.className='chip'+(c==='Tümü'?' active':'');b.textContent=c;b.onclick=()=>{active=c;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()};chips.appendChild(b)});
+function render(){
+ const q=search.value.trim().toLocaleLowerCase('tr-TR'); catalog.innerHTML=''; let total=0;
+ Object.entries(SERVICE_CATALOG).forEach(([cat,items])=>{
+   if(active!=='Tümü' && active!==cat)return;
+   const filtered=items.filter(x=>!q || x.toLocaleLowerCase('tr-TR').includes(q) || cat.toLocaleLowerCase('tr-TR').includes(q));
+   if(!filtered.length)return; total+=filtered.length;
+   const d=document.createElement('details');d.className='service-card';d.open=!!q;
+   d.innerHTML='<summary>'+esc(cat)+'<span class="count">'+filtered.length+' hizmet</span></summary><div class="list">'+filtered.map(x=>'<span>'+esc(x)+'</span>').join('')+'</div>';
+   catalog.appendChild(d);
+ });
+ count.textContent=total+' hizmet listeleniyor';
 }
-
-// Accordion
-function toggleCard(head) {
-  if (window.innerWidth >= 768) return;
-  head.closest('.srv-card').classList.toggle('expanded');
-}
-
-// Desktop: expand all
-function applyDesktop() {
-  if (window.innerWidth >= 768) {
-    document.querySelectorAll('.srv-card').forEach(c => c.classList.add('expanded'));
-  }
-}
-applyDesktop();
-window.addEventListener('resize', applyDesktop);
+search.addEventListener('input',render);render();
 </script>
 </body>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "AE Teknik – Servis & Montaj Hizmetleri",
-  "description": "Çiğli, Karşıyaka, Menemen, Foça, Bayraklı, Bornova'da profesyonel montaj ustası. Mobilya, avize, korniş, stor perde, tesisat, elektrik montajı.",
-  "url": "https://montajustasi.github.io/montajizmir/",
-  "telephone": "+905438108096",
-  "priceRange": "₺₺",
-  "openingHours": "Mo-Su 08:00-22:00",
-  "areaServed": ["Çiğli", "Karşıyaka", "Menemen", "Foça", "Bayraklı", "Bornova"],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "İzmir",
-    "addressCountry": "TR"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Montaj Hizmetleri",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobilya Montajı"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Avize Montajı"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Korniş Montajı"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tesisat"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Elektrik Montajı"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Beyaz Eşya Montajı"}}
-    ]
-  }
-}
-</script>
 </html>
